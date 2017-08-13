@@ -2,8 +2,8 @@
 layout: default
 title: চিন্তা
 ---
-
 <main class="content" role="main">
+  {% if paginator.page %}
   {% for post in site.tags["sticky"] %}
   <article class="preview">
     <header>
@@ -44,6 +44,7 @@ title: চিন্তা
     </div>
   </article>
   {% endfor %}
+  {% endif %}
 
   {% for post in paginator.posts %}
   {% if post.layout != "redirected" %}
