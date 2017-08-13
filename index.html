@@ -16,11 +16,13 @@ title: চিন্তা
     <section class="post-excerpt">
       {% if post.excerpt_separator %}
       <p>{{ post.excerpt}}&hellip;</p>
-      <p class="readmore"><a href="{{post.url}}">আরো পড়ুন <i class="fa fa-chevron-circle-right"></i></a></p>
       {% else %}
       {{ post.content }}
       {% endif %}
     </section>
+    {% if post.excerpt_separator %}
+    <p class="readmore"><a href="{{post.url}}">আরো পড়ুন <i class="fa fa-chevron-circle-right"></i></a></p>
+    {% endif %}
     <div class="article-footer">
       <section class="social-icons-post index-social">
         <div class="social-icon">
@@ -52,12 +54,14 @@ title: চিন্তা
     </header>
     <section class="post-excerpt">
       {% if post.excerpt_separator %}
-      <p>{{ post.excerpt}}&hellip;</p>
-      <p class="readmore"><a href="{{post.url}}">আরো পড়ুন <i class="fa fa-chevron-circle-right"></i></a></p>
+      <p>{{ post.excerpt}}&hellip;</p> 
       {% else %}
       {{ post.content }}
       {% endif %}
     </section>
+    {% if post.excerpt_separator %}
+    <p class="readmore"><a href="{{post.url}}">আরো পড়ুন <i class="fa fa-chevron-circle-right"></i></a></p>
+    {% endif %}
     <div class="article-footer">
       <section class="social-icons-post index-social">
         <div class="social-icon">
