@@ -128,16 +128,19 @@ a.archive-link, .article-nav {
 
 article.preview {
     margin-bottom: 4em;
-
-    p.readmore {
-        font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-        margin-top: 1em;
-        text-transform: uppercase;
-        font-weight: 400;
-        width: 100%;
-        text-align: center;
-    }
+    display: flex;
+    flex-direction: column;
 }
+
+p.readmore {
+    font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
+
 
 /* === Header === */
 
@@ -412,7 +415,6 @@ img.userimage {
     .social-icons-post {
         display: flex;
         justify-content: flex-end;
-        margin-top: 10px;
         .social-icon {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -474,6 +476,9 @@ img.userimage {
         }
     }
     .meta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .post-meta-bottom {
             width: 100%;
             text-align: right;    
