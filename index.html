@@ -3,7 +3,7 @@ layout: default
 title: চিন্তা
 ---
 <main class="content" role="main">
-  {% if paginator.page %}
+  {% if paginator.page == 1%}
   {% for post in site.tags["sticky"] %}
   <article class="preview">
     <header>
