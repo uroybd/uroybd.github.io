@@ -1,10 +1,10 @@
 <head>
   {% if site.github_username %}
-  <script>
-   var host = "{{ site.github_username }}.github.io";
-   if ((host == window.location.host) && (window.location.protocol != "https:"))
-     window.location.protocol = "https";
-  </script>
+  <!-- <script>
+       var host = "{{ site.github_username }}.github.io";
+       if ((host == window.location.host) && (window.location.protocol != "https:"))
+       window.location.protocol = "https";
+       </script> -->
   {% endif %}
   <link rel="canonical" href="{{ site.url | replace:'http://','https://'}}{{ page.url | replace:'index.html',''}}">
   <meta charset="UTF-8" />
