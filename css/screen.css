@@ -1,0 +1,44 @@
+/*
+Error: Invalid CSS after "...urce+Code+Pro")": expected "{", was ";"
+        on line 4 of css/screen.scss
+
+1: ---
+2: ---
+3: // start content
+4: @import url("https://fonts.googleapis.com/css?family=Merriweather+Sans|Merriweather:400,400i,700|Source+Code+Pro");
+5: 
+6: @import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+7: 
+8: /* === Core Styles === *\/
+9: 
+
+Backtrace:
+css/screen.scss:4
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1207:in `expected'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1137:in `expected'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1132:in `tok!'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:665:in `block'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:658:in `ruleset'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:684:in `block_child'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:674:in `block_contents'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:125:in `stylesheet'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:41:in `parse'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:406:in `_to_tree'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/home/uroybd/.gem/ruby/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...urce+Code+Pro\")\": expected \"{\", was \";\"\A         on line 4 of css/screen.scss\A \A 1: ---\A 2: ---\A 3: // start content\A 4: @import url(\"https://fonts.googleapis.com/css?family=Merriweather+Sans|Merriweather:400,400i,700|Source+Code+Pro\");\A 5: \A 6: @import url(\"https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\");\A 7: \A 8: /* === Core Styles === */\A 9: "; }
