@@ -69,3 +69,4 @@ gems:
   - jemoji
   - jekyll-paginate
   - jekyll-sass
+  - jekyll-sitemap
