@@ -1,7 +1,7 @@
 ---
 ---
 // start content
-@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans|Merriweather:400,400i,700|Source+Code+Pro");
+@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans:400,400i,700,700i|Source+Code+Pro");
 
 @import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: subpixel-antialiased;
-    font-family: "Noto Sans Bengali UI", "Merriweather", "Open Sans", serif;
+    font-family: "Noto Sans Bengali UI", "Merriweather Sans", "Open Sans", serif;
     
     * {
         max-height: 1000000em;
@@ -24,7 +24,7 @@ body {
 }
 
 h1, h2, h3, h4, p, li, dt, dd {
-    font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+    font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
 }
 
 h1, .post-meta {
@@ -90,7 +90,7 @@ p code {
 
 h1 {
     color: #151515;
-    font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+    font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
     font-size: 36px;
     font-weight: 400;
     line-height: 42px;
@@ -135,7 +135,7 @@ article.preview {
 }
 
 p.readmore {
-    font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+    font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
     margin-top: 1em;
     text-transform: uppercase;
     font-weight: 400;
@@ -228,7 +228,7 @@ section {
 
     &.author {
         h4 {
-            font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+            font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
             font-weight: 400;
             margin-bottom: 4px;
         }
@@ -237,7 +237,7 @@ section {
             font-size: 16px;
             line-height: 20px;
             text-transform: uppercase;
-            font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+            font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
         }
     }
 
@@ -245,7 +245,7 @@ section {
         font-size: 16px;
         line-height: 20px;
         text-transform: uppercase;
-        font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+        font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
 
         &.prompt {
             top: -5px;
@@ -269,7 +269,7 @@ section {
 }
 
 blockquote {
-    font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+    font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
     font-size: 1em;
     font-weight: 300;
     line-height: 1.2em;
@@ -282,7 +282,7 @@ blockquote {
     }
     
     p {
-        font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+        font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
         font-size: 1.6em;
         font-weight: 300;
         line-height: 1.2em;
@@ -305,7 +305,7 @@ blockquote {
 
 .post-meta {
     color: #95a5a6;
-    font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+    font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
     font-size: 20px;
     font-weight: 300;
     margin-top: 1em;
@@ -351,7 +351,7 @@ h1 {
 }
 
 h2 {
-    font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+    font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
     margin-top: 2em;
     text-transform: uppercase;
     font-weight: 300;
@@ -498,7 +498,7 @@ footer {
     text-align: center;
 
     section {
-        font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+        font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
         font-weight: 300;
         font-size: 18px;
         margin: 0 auto;
@@ -534,7 +534,7 @@ nav {
 
         li {
             display: inline-block;
-            font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+            font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
             font-size: 18px;
             font-weight: 300;
             margin: 0;
@@ -587,7 +587,7 @@ a.archive-link {
     border-bottom: 1px solid #ecf0f1;
     border-top: 1px solid #ecf0f1;
     display: block;
-    font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+    font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 3em;
@@ -601,7 +601,7 @@ a.archive-link {
     position: relative;
     width: 90%;
     max-width: 600px;
-    font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+    font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
     text-transform: uppercase;
     font-size: 20px;
     color: #4c5454;
@@ -653,7 +653,7 @@ a.archive-link {
         border: 1px solid rgba(0, 0, 0, 0.05) !important;
 
         .gist-meta {
-            font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+            font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
             font-weight: 300 !important;
             text-transform: uppercase !important;
             display: none !important;
@@ -737,7 +737,7 @@ a.archive-link {
 
 table {
     width: 100%;
-    font-family: "Noto Sans Bengali UI", "Merriweather", serif;
+    font-family: "Noto Sans Bengali UI", "Merriweather Sans", serif;
     border-collapse: collapse;
     margin: 1em 0 3em;
 
