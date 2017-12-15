@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-size: 16px;
+  color: #202020; }
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Noto Sans Bengali UI", "Quicksand", sans-serif; }
+  .main-container .sections {
+    min-height: 100vh;
+    flex: 1; }
+  .main-container .about {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fafafa;
+    position: relative; }
+    .main-container .about .locale {
+      width: min-content;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 1.4em;
+      color: #505050;
+      cursor: pointer;
+      padding: 5px 10px;
+      background-color: #e2e2e2; }
+      .main-container .about .locale:hover {
+        color: #202020;
+        background-color: #d6d6d6; }
+    .main-container .about .meta .title {
+      font-size: 3em; }
+    .main-container .about .meta .alt-title {
+      font-size: 1.7em; }
+    .main-container .about .meta .one-liner {
+      margin-top: 35px;
+      font-size: 1.6em;
+      margin-bottom: 45px;
+      font-style: italic;
+      font-weight: 500; }
+    .main-container .about .description {
+      font-size: 1.3em;
+      line-height: 1.5em;
+      flex: 1; }
+      .main-container .about .description p {
+        margin-bottom: 1.5em; }
+    .main-container .about .contact {
+      display: flex;
+      justify-content: flex-end; }
+      .main-container .about .contact .contact-btn {
+        height: 60px;
+        text-align: right;
+        line-height: 60px;
+        vertical-align: middle;
+        font-size: 1.3em;
+        padding: 0px 15px;
+        background-color: #e2e2e2; }
+        .main-container .about .contact .contact-btn:hover {
+          background-color: #d6d6d6; }
+  .main-container .blog {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; }
+    .main-container .blog .blog-tiles {
+      flex: 1;
+      text-align: center; }
+      .main-container .blog .blog-tiles .blog-meta {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all .2s ease-in-out; }
+        .main-container .blog .blog-tiles .blog-meta .title {
+          font-size: 2.3em; }
+        .main-container .blog .blog-tiles .blog-meta .bdesc {
+          font-size: 1.3em; }
+        .main-container .blog .blog-tiles .blog-meta:hover {
+          transform: scale(1.1); }
+
+#thoughts {
+  background-color: #f5f5f5; }
+
+#tech {
+  background-color: #c3c3c3; }
+
+.tiles {
+  width: 100%; }
+
+.contact-form {
+  position: fixed;
+  top: 0;
+  left: 53%;
+  height: 100%;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 47vw;
+  padding: 3%; }
+  .contact-form .close {
+    font-size: 2.5em;
+    position: absolute;
+    right: 2vw;
+    top: 1vw; }
+  .contact-form form {
+    display: flex;
+    flex-direction: column; }
+    .contact-form form input[type=text], .contact-form form input[type=email], .contact-form form textarea {
+      border: none;
+      border-bottom: 2px solid black;
+      margin: 10px 0px;
+      line-height: 2em;
+      font-size: 2em;
+      padding-left: 5px;
+      background-color: inherit; }
+    .contact-form form textarea {
+      line-height: 1.1em;
+      font-size: 1.1em; }
+    .contact-form form .btn-cont {
+      display: flex;
+      justify-content: flex-end; }
+    .contact-form form input[type=submit] {
+      padding: 10px 30px;
+      font-size: 1.5em;
+      background-color: #404040;
+      color: #f1f1f1;
+      border: none; }
+
+.cform-enter-active, .cform-leave-active {
+  transition: all 1.5s; }
+
+.cform-enter, .cform-leave-to {
+  position: fixed;
+  top: 0;
+  left: 100%; }
+
+@media (orientation: portrait) {
+  .main-container {
+    flex-wrap: wrap; }
+    .main-container .sections {
+      flex: initial;
+      width: 100vw; }
+
+  .contact-form {
+    width: 100vw;
+    left: 0; } }
+@media only screen and (max-width: 768px) {
+  .contact {
+    justify-content: center; }
+    .contact .contact-btn {
+      font-size: 1.1em !important; } }
+
+/*# sourceMappingURL=styles.css.map */
