@@ -173,6 +173,11 @@ body {
             font-size: 2em;
             padding-left: 5px;
             background-color: inherit;
+
+            &:focus {
+                outline: none;
+                border-color: #202020;
+            }
         }
 
         textarea {

@@ -121,6 +121,9 @@ body {
       font-size: 2em;
       padding-left: 5px;
       background-color: inherit; }
+      .contact-form form input[type=text]:focus, .contact-form form input[type=email]:focus, .contact-form form textarea:focus {
+        outline: none;
+        border-color: #202020; }
     .contact-form form textarea {
       line-height: 1.1em;
       font-size: 1.1em; }
