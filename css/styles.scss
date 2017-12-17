@@ -211,6 +211,10 @@ body {
 
 
 @media (orientation:portrait){
+    
+}
+
+@media only screen and (max-width: 768px){
     .main-container {
         flex-wrap: wrap;
 
@@ -225,9 +229,7 @@ body {
         width: 100vw;
         left: 0;
     }
-}
-
-@media only screen and (max-width: 768px){
+    
     .contact {
         justify-content: center;
         

@@ -145,7 +145,7 @@ body {
   top: 0;
   left: 100%; }
 
-@media (orientation: portrait) {
+@media only screen and (max-width: 768px) {
   .main-container {
     flex-wrap: wrap; }
     .main-container .sections {
@@ -154,8 +154,8 @@ body {
 
   .contact-form {
     width: 100vw;
-    left: 0; } }
-@media only screen and (max-width: 768px) {
+    left: 0; }
+
   .contact {
     justify-content: center; }
     .contact .contact-btn {
