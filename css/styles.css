@@ -62,7 +62,8 @@ body {
         vertical-align: middle;
         font-size: 1.3em;
         padding: 0px 15px;
-        background-color: #e2e2e2; }
+        background-color: #e2e2e2;
+        cursor: pointer; }
         .main-container .about .contact .contact-btn:hover {
           background-color: #d6d6d6; }
   .main-container .blog {
@@ -71,7 +72,8 @@ body {
     overflow: hidden; }
     .main-container .blog .blog-tiles {
       flex: 1;
-      text-align: center; }
+      text-align: center;
+      cursor: pointer; }
       .main-container .blog .blog-tiles .blog-meta {
         height: 100%;
         display: flex;
