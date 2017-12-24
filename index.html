@@ -35,13 +35,13 @@
         </div>
       </div>
       <div class="sections blog">
-        <div class="tiles blog-tiles" id="thoughts" v-on:click="goTo('thoughts')">
+        <div v-bind:class="{tiles: true, 'trans-active-thoughts': transitions.thoughts, 'blog-tiles': true}" id="thoughts" v-on:click="goTo('thoughts')">
           <div class="blog-meta">
             <h2 class="title">বিবিধ অপলাপ</h2>
             <div class="bdesc">বোধি বিষাদ ও নক্ষত্রজাত বাজপাখির হাহাকার</div>
           </div>
         </div>
-        <div id="tech" class="tiles blog-tiles" v-on:click="goTo('tech')">
+        <div id="tech" v-bind:class="{tiles: true, 'trans-active-tech': transitions.tech, 'blog-tiles': true}" v-on:click="goTo('tech')">
           <div class="blog-meta">
             <h2 class="title">যন্তর-মন্তর</h2>
             <div class="bdesc">উৎসবের টেকনিক্যাল ব্লগ</div>
@@ -69,6 +69,10 @@
      var App = new Vue({
        el: "#app",
        data: {
+         transitions: {
+           thoughts: false,
+           tech: false
+         },
          showForm: false,
          pages: {
            thoughts: "https://thoughts.utsob.me",
@@ -110,12 +114,18 @@
          }
        },
        methods: {
+         toggleTransition: function(key){
+           this.transitions[key] = !this.transitions[key];
+         },
          toggleLocale: function(){
            this.currentLocale = (this.currentLocale == 'bangla'? 'english':'bangla');
          },
-         goTo: function(page){
-           console.log(this.pages[page]);
-           window.location.href = this.pages[page];
+         goTo: function(key){
+           this.transitions[key] = !this.transitions[key];
+           setTimeout(function(){
+             console.log(this.pages[key]);
+             window.location.href = this.pages[key];
+           }.bind(this), 600);
          },
          toggleForm(){
            this.showForm = !this.showForm;

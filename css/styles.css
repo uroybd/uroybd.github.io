@@ -73,7 +73,10 @@ body {
     .main-container .blog .blog-tiles {
       flex: 1;
       text-align: center;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all .6s ease;
+      width: 50vw;
+      height: 50vh; }
       .main-container .blog .blog-tiles .blog-meta {
         height: 100%;
         display: flex;
@@ -86,6 +89,20 @@ body {
           font-size: 1.3em; }
         .main-container .blog .blog-tiles .blog-meta:hover {
           transform: scale(1.3); }
+    .main-container .blog .trans-active-thoughts {
+      z-index: 999999;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh; }
+    .main-container .blog .trans-active-tech {
+      z-index: 999999;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh; }
 
 #thoughts {
   background-color: #f5f5f5; }
