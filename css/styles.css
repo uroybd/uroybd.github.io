@@ -170,6 +170,23 @@ body {
     .main-container .sections {
       flex: initial;
       width: 100vw; }
+    .main-container .blog .blog-tiles {
+      width: 100vw;
+      height: 50vh; }
+    .main-container .blog .trans-active-thoughts {
+      z-index: 999999;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh; }
+    .main-container .blog .trans-active-tech {
+      z-index: 999999;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh; }
 
   .contact-form {
     width: 100vw;

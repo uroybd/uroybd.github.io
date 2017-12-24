@@ -233,9 +233,6 @@ body {
 }
 
 
-@media (orientation:portrait){
-    
-}
 
 @media only screen and (max-width: 768px){
     .main-container {
@@ -245,7 +242,31 @@ body {
             flex: initial;
             width: 100vw;
         }
-                           
+
+        .blog {
+            .blog-tiles {
+                width: 100vw;
+                height: 50vh;
+            }
+
+            .trans-active-thoughts {
+            z-index: 999999;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .trans-active-tech {
+            z-index: 999999;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        }                  
     }
 
     .contact-form {
@@ -260,4 +281,5 @@ body {
             font-size: 1.1em !important;
         }
     }
+
 }
