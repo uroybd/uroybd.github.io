@@ -180,8 +180,8 @@ body {
     .close {
         font-size: 2.5em;
         position: absolute;
-        right: 2vw;
-        top: 1vw;
+        right: 5px;
+        top: -5px;
     }
 
     form {
@@ -219,6 +219,8 @@ body {
             background-color: #404040;
             color: #f1f1f1;
             border: none;
+            min-width: 170px;
+            min-height: 53px;
         }
     }
 }
@@ -282,4 +284,28 @@ body {
         }
     }
 
+}
+
+@media only screen and (max-width: 425px){
+    .main-container {
+        flex-wrap: wrap;
+        .about {
+            .description {
+                font-size: 1em;
+                line-height: 1.2em;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 376px){
+    .main-container {
+        flex-wrap: wrap;
+        .about {
+            .description {
+                line-height: 1.5em;
+            }
+        }
+    }
 }

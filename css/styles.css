@@ -127,8 +127,8 @@ body {
   .contact-form .close {
     font-size: 2.5em;
     position: absolute;
-    right: 2vw;
-    top: 1vw; }
+    right: 5px;
+    top: -5px; }
   .contact-form form {
     display: flex;
     flex-direction: column; }
@@ -154,7 +154,9 @@ body {
       font-size: 1.5em;
       background-color: #404040;
       color: #f1f1f1;
-      border: none; }
+      border: none;
+      min-width: 170px;
+      min-height: 53px; }
 
 .cform-enter-active, .cform-leave-active {
   transition: all 1s; }
@@ -196,5 +198,16 @@ body {
     justify-content: center; }
     .contact .contact-btn {
       font-size: 1.1em !important; } }
+@media only screen and (max-width: 425px) {
+  .main-container {
+    flex-wrap: wrap; }
+    .main-container .about .description {
+      font-size: 1em;
+      line-height: 1.2em; } }
+@media only screen and (min-width: 376px) {
+  .main-container {
+    flex-wrap: wrap; }
+    .main-container .about .description {
+      line-height: 1.5em; } }
 
 /*# sourceMappingURL=styles.css.map */
