@@ -76,7 +76,6 @@ body .sidebar .sidebar-content {
 }
 @media (max-width: 765px) {
   body .sidebar .sidebar-content {
-    border-bottom: 1px solid var(--fg-color);
     border-right: none;
     margin-top: none;
     margin-left: 2.5vw;
@@ -85,12 +84,12 @@ body .sidebar .sidebar-content {
   }
 }
 body .sidebar .sidebar-content .title {
-  font-size: 16px;
+  font-size: 30px;
 }
 @media screen and (min-width: 320px) {
   body .sidebar .sidebar-content .title {
     font-size: calc(
-                    16px + 84 *
+                    30px + 70 *
                         ((100vw - 320px) / 880)
                 );
   }
@@ -128,12 +127,12 @@ body .content section {
   }
 }
 body .content section .section-title {
-  font-size: 16px;
+  font-size: 20px;
 }
 @media screen and (min-width: 320px) {
   body .content section .section-title {
     font-size: calc(
-                    16px + 44 *
+                    20px + 40 *
                         ((100vw - 320px) / 880)
                 );
   }

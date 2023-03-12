@@ -17,6 +17,15 @@ function handleIntersect(evt, idx) {
   if (evt[0].isIntersecting) {
     document.body.style.setProperty("--bg-color", `var(--bg-color-${idx})`);
     document.body.style.setProperty("--fg-color", `var(--fg-color-${idx})`);
+    if (evt[0].target.id) {
+      window.location.hash = evt[0].target.id || null;
+    } else {
+      history.pushState(
+        "",
+        document.title,
+        window.location.pathname + window.location.search
+      );
+    }
   }
 }
 

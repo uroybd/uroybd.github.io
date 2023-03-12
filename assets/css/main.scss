@@ -94,7 +94,7 @@ body {
             justify-content: center;
 
             @media (max-width: 765px) {
-                border-bottom: 1px solid var(--fg-color);
+                // border-bottom: 1px solid var(--fg-color);
                 border-right: none;
                 margin-top: none;
                 margin-left: 2.5vw;
@@ -103,7 +103,7 @@ body {
             }
 
             .title {
-                @include fluid-type($min_width, $max_width, $min_font, 100px);
+                @include fluid-type($min_width, $max_width, 30px, 100px);
             }
         }
     }
@@ -134,7 +134,7 @@ body {
             }
 
             .section-title {
-                @include fluid-type($min_width, $max_width, $min_font, 60px);
+                @include fluid-type($min_width, $max_width, 20px, 60px);
             }
 
             .section-content {
