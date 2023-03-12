@@ -37,3 +37,9 @@ function handleIntersect(evt, idx) {
 }
 
 setupIntersections();
+lucide.createIcons({
+  attrs: {
+    class: ["icon"],
+    stroke: "var(--fg-color)",
+  },
+});

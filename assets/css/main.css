@@ -99,6 +99,17 @@ body .sidebar .sidebar-content .title {
     font-size: 100px;
   }
 }
+body .sidebar .sidebar-content .connections {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+body .sidebar .sidebar-content .connections a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 body .content {
   width: 50vw;
   height: 100vh;
