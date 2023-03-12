@@ -5,14 +5,14 @@
 }
 
 :root {
-  --bg-color-0: #e4e4e4;
-  --bg-color-1: #2c2c32;
-  --bg-color-2: #e8e3df;
-  --bg-color-3: #ff9090;
+  --bg-color-0: #ffffff;
+  --bg-color-1: #e1e1e1;
+  --bg-color-2: #2c2c32;
+  --bg-color-3: #000000;
   --fg-color-0: #000000;
-  --fg-color-1: #ffffff;
-  --fg-color-2: #000000;
-  --fg-color-3: #2e2e2e;
+  --fg-color-1: #2d2d2d;
+  --fg-color-2: #d1d1d1;
+  --fg-color-3: #ffffff;
   --font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
       "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
       "Noto Color Emoji";

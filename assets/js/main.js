@@ -5,8 +5,8 @@ function setupIntersections() {
       (evt) => handleIntersect(evt, idx),
       {
         root: null,
-        rootMargin: "0px",
-        threshold: 0.5,
+        // rootMargin: "-50%",
+        threshold: 0.7,
       }
     );
     observer.observe(el);
