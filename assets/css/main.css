@@ -81,6 +81,7 @@ body .sidebar .sidebar-content {
     margin-left: 2.5vw;
     margin-right: 2.5vw;
     width: calc(100% - 5vw);
+    align-items: center;
   }
 }
 body .sidebar .sidebar-content .title {
@@ -109,6 +110,11 @@ body .sidebar .sidebar-content .connections a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+@media (max-width: 765px) {
+  body .sidebar .sidebar-content .connections {
+    justify-content: center;
+  }
 }
 body .content {
   width: 50vw;
