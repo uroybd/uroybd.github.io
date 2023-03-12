@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color-0: #e4e4e4;
+    --bg-color-1: #2c2c32;
+    --bg-color-2: #e8e3df;
+    --bg-color-3: #ff9090;
+
+    --fg-color-0: #000000;
+    --fg-color-1: #ffffff;
+    --fg-color-2: #000000;
+    --fg-color-3: #2e2e2e;
+
+    --font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+        "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            font-size: $min-font-size;
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(
+                    #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+                        ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+                );
+            }
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+
+html {
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+body {
+    --bg-color: var(--bg-color-0);
+    --fg-color: var(--fg-color-0);
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-family: var(--font-family-sans-serif);
+
+    transition: background-color 0.5s ease, color 0.3s ease, border-color 0.5s ease;
+
+    @media (max-width: 765px) {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 50vw;
+        height: 100vh;
+
+        @media (max-width: 765px) {
+            width: 100vw;
+            height: 30vh;
+            text-align: center;
+        }
+
+        .sidebar-content {
+            height: 90%;
+            margin-top: 5%;
+            width: 100%;
+            padding-left: 2.5vw;
+            padding-right: 2.5vw;
+            border-right: 1px solid var(--fg-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @media (max-width: 765px) {
+                border-bottom: 1px solid var(--fg-color);
+                border-right: none;
+                margin-top: none;
+                margin-left: 2.5vw;
+                margin-right: 2.5vw;
+                width: calc(100% - 5vw);
+            }
+
+            .title {
+                @include fluid-type($min_width, $max_width, $min_font, 100px);
+            }
+        }
+    }
+
+    .content {
+        width: 50vw;
+        height: 100vh;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        padding: 2.5vw;
+
+        @media (max-width: 765px) {
+            width: 100vw;
+            height: 70vh;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - 5vw);
+            justify-content: center;
+            margin-bottom: 2.5vw;
+
+            @media (max-width: 765px) {
+                min-height: calc(70vh - 5vw);
+            }
+
+            .section-title {
+                @include fluid-type($min_width, $max_width, $min_font, 60px);
+            }
+
+            .section-content {
+                padding-top: 2.5vw;
+
+                @media (max-width: 765px) {
+                    padding: 5vw;
+                }
+
+                p {
+                    padding-bottom: 1rem;
+                }
+
+                a {
+                    text-decoration: underline;
+                    color: inherit;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
