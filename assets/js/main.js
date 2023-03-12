@@ -18,7 +18,14 @@ function handleIntersect(evt, idx) {
     document.body.style.setProperty("--bg-color", `var(--bg-color-${idx})`);
     document.body.style.setProperty("--fg-color", `var(--fg-color-${idx})`);
     if (evt[0].target.id) {
-      window.location.hash = evt[0].target.id || null;
+      history.pushState(
+        "",
+        document.title,
+        window.location.pathname +
+          "#" +
+          evt[0].target.id +
+          window.location.search
+      );
     } else {
       history.pushState(
         "",
