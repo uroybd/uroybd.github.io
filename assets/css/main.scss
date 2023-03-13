@@ -65,11 +65,10 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 2.5vw;
 
     padding-left: 52.5vw;
     // padding-right: 0;
-    width: 95vw;
+    width: 100vw;
     height: 100vh;
     overflow-y: scroll;
     background-color: var(--bg-color);
@@ -82,8 +81,6 @@ body {
         flex-direction: column;
         scroll-behavior: smooth;
         text-align: center;
-        padding-left: unset;
-        padding-right: 0;
         width: 100vw;
         padding: 0;
     }
@@ -94,6 +91,10 @@ body {
         position: fixed;
         left: 0;
         top: 0;
+        padding: 2.5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         @media (max-width: 765px) {
             width: 100vw;
@@ -105,7 +106,6 @@ body {
 
         .sidebar-content {
             height: 90%;
-            margin-top: 5%;
             width: 100%;
             padding-left: 2.5vw;
             padding-right: 2.5vw;
@@ -151,14 +151,12 @@ body {
     section {
         display: flex;
         flex-direction: column;
-        min-height: calc(100vh - 5vw);
+        min-height: 100vh;
         justify-content: center;
-        margin-bottom: 2.5vw;
+        padding: 2.5vw;
         scroll-snap-align: center;
 
         @media (max-width: 765px) {
-            height: 100vh;
-            margin-bottom: 0;
             padding-top: 30vh;
         }
 
