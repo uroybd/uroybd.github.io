@@ -75,7 +75,7 @@ body {
         flex-direction: column;
     }
 
-    .sidebar {
+    aside.sidebar {
         width: 50vw;
         height: 100vh;
 
@@ -129,13 +129,15 @@ body {
         }
     }
 
-    .content {
+    main.content {
         width: 50vw;
         height: 100vh;
         overflow-y: scroll;
         display: flex;
         flex-direction: column;
         padding: 2.5vw;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
 
         @media (max-width: 765px) {
             width: 100vw;
@@ -149,6 +151,7 @@ body {
             min-height: calc(100vh - 5vw);
             justify-content: center;
             margin-bottom: 2.5vw;
+            scroll-snap-align: center;
 
             @media (max-width: 765px) {
                 min-height: calc(70vh - 5vw);
