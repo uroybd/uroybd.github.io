@@ -61,7 +61,7 @@ body {
     scroll-behavior: smooth;
     text-align: center;
     padding-left: unset;
-    // padding-top: 30vh;
+    padding-top: 0;
     padding-right: 0;
     width: 100vw;
   }
