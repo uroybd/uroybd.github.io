@@ -162,6 +162,7 @@ body .content section .section-title {
 }
 body .content section .section-content {
   padding-top: 2.5vw;
+  padding-right: 2.5vw;
 }
 @media (max-width: 765px) {
   body .content section .section-content {
