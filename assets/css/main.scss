@@ -70,7 +70,7 @@ body {
     padding-left: 52.5vw;
     // padding-right: 0;
     width: 95vw;
-    min-height: 100vh;
+    height: 100vh;
     overflow-y: scroll;
     background-color: var(--bg-color);
     color: var(--fg-color);
@@ -83,9 +83,9 @@ body {
         scroll-behavior: smooth;
         text-align: center;
         padding-left: unset;
-        padding-top: 30vh;
         padding-right: 0;
         width: 100vw;
+        padding: 0;
     }
 
     aside.sidebar {
@@ -117,9 +117,10 @@ body {
             @media (max-width: 765px) {
                 // border-bottom: 1px solid var(--fg-color);
                 border-right: none;
-                margin-top: none;
-                margin-left: 2.5vw;
-                margin-right: 2.5vw;
+                // margin-top: none;
+                // margin-left: 2.5vw;
+                // margin-right: 2.5vw;
+                margin: none;
                 width: calc(100% - 5vw);
                 align-items: center;
             }
@@ -156,8 +157,8 @@ body {
         scroll-snap-align: center;
 
         @media (max-width: 765px) {
-            min-height: calc(70vh - 5vw);
             height: 100vh;
+            margin-bottom: 0;
             padding-top: 30vh;
         }
 
