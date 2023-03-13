@@ -68,7 +68,8 @@ body {
     padding: 2.5vw;
 
     padding-left: 52.5vw;
-    width: 100vw;
+    // padding-right: 0;
+    width: 95vw;
     min-height: 100vh;
     overflow-y: scroll;
     background-color: var(--bg-color);
@@ -83,6 +84,8 @@ body {
         text-align: center;
         padding-left: unset;
         padding-top: 30vh;
+        padding-right: 0;
+        width: 100vw;
     }
 
     aside.sidebar {
@@ -96,6 +99,8 @@ body {
             width: 100vw;
             height: 30vh;
             text-align: center;
+            background-color: var(--bg-color);
+            transition: background-color 0.5s ease, color 0.3s ease, border-color 0.5s ease;
         }
 
         .sidebar-content {
