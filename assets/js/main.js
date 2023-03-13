@@ -26,12 +26,14 @@ function handleIntersect(evt, idx) {
           evt[0].target.id +
           window.location.search
       );
+      setActive(document.querySelectorAll("nav > a")[idx]);
     } else {
       history.pushState(
         "",
         document.title,
         window.location.pathname + window.location.search
       );
+      setActive(document.querySelectorAll("nav > a")[0]);
     }
   }
 }
@@ -42,4 +44,18 @@ lucide.createIcons({
     class: ["icon"],
     stroke: "var(--fg-color)",
   },
+});
+
+function setActive(el) {
+  let active = document.querySelector("nav > a.active");
+  if (active) {
+    active.classList.remove("active");
+  }
+  el.classList.add("active");
+}
+
+document.querySelectorAll("nav > a").forEach((el) => {
+  el.addEventListener("click", function () {
+    setActive(el);
+  });
 });
