@@ -6,7 +6,7 @@ function setupIntersections() {
       {
         root: null,
         // rootMargin: "-50%",
-        threshold: 0.7,
+        threshold: [0.25, 0.5, 0.75],
       }
     );
     observer.observe(el);
@@ -14,6 +14,7 @@ function setupIntersections() {
 }
 
 function handleIntersect(evt, idx) {
+  // console.log(evt, idx);
   if (evt[0].isIntersecting) {
     document.body.style.setProperty("--bg-color", `var(--bg-color-${idx})`);
     document.body.style.setProperty("--fg-color", `var(--fg-color-${idx})`);

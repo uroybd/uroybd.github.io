@@ -55,22 +55,15 @@ $max_font: 24px;
 
 html {
     @include fluid-type($min_width, $max_width, $min_font, $max_font);
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
 }
 
 body {
     --bg-color: var(--bg-color-0);
     --fg-color: var(--fg-color-0);
     position: relative;
-    display: flex;
-    flex-direction: column;
-
     padding-left: 52.5vw;
-    // padding-right: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    overflow-y: scroll;
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-family: var(--font-family-sans-serif);
@@ -79,7 +72,6 @@ body {
 
     @media (max-width: 765px) {
         flex-direction: column;
-        scroll-behavior: smooth;
         text-align: center;
         width: 100vw;
         padding: 0;
@@ -120,7 +112,7 @@ body {
                 // margin-top: none;
                 // margin-left: 2.5vw;
                 // margin-right: 2.5vw;
-                margin: none;
+                margin: 0;
                 width: calc(100% - 5vw);
                 align-items: center;
             }
@@ -148,39 +140,51 @@ body {
         }
     }
 
-    section {
+    main {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
-        justify-content: center;
-        padding: 2.5vw;
-        scroll-snap-align: center;
 
-        @media (max-width: 765px) {
-            padding-top: 30vh;
-        }
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
 
-        .section-title {
-            @include fluid-type($min_width, $max_width, 20px, 60px);
-        }
-
-        .section-content {
-            padding-top: 2.5vw;
-            padding-right: 2.5vw;
+        section {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            padding: 2.5vw;
+            scroll-snap-align: center;
+            width: 100%;
 
             @media (max-width: 765px) {
-                padding: 5vw;
+                padding-top: 30vh;
             }
 
-            p {
-                padding-bottom: 1rem;
+            .section-title {
+                @include fluid-type($min_width, $max_width, 20px, 60px);
             }
 
-            a {
-                text-decoration: underline;
-                color: inherit;
-                font-weight: bold;
-                cursor: pointer;
+            .section-content {
+                padding-top: 2.5vw;
+                padding-right: 2.5vw;
+
+                @media (max-width: 765px) {
+                    padding: 5vw;
+                }
+
+                p {
+                    padding-bottom: 1rem;
+                }
+
+                a {
+                    text-decoration: underline;
+                    color: inherit;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
             }
         }
     }
