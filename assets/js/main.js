@@ -55,8 +55,12 @@ function setActive(el) {
   el.classList.add("active");
 }
 
-document.querySelectorAll("nav > a").forEach((el) => {
-  el.addEventListener("click", function () {
+document.querySelectorAll("nav > a").forEach((el, idx) => {
+  el.addEventListener("click", function (evt) {
+    evt.preventDefault();
     setActive(el);
+    document.body
+      .querySelector("main")
+      .scrollTo(0, document.body.offsetHeight * idx);
   });
 });
