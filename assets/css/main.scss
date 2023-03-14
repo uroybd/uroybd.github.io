@@ -9,15 +9,25 @@
 :root {
     --bg-color-0: #e8e3df;
     --bg-color-1: #2c2c32;
-    --bg-color-2: #0d1e37;
+    --bg-color-2: #d6d6d6;
     --bg-color-3: #000000;
 
     --fg-color-0: #000000;
     --fg-color-1: #d1d1d1;
-    --fg-color-2: #d1d1d1;
+    --fg-color-2: #000000;
     --fg-color-3: #ffffff;
 
-    --font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    --cursor-0: url("/assets/images/cursors/circle-black.svg");
+    --cursor-1: url("/assets/images/cursors/circle-gray.svg");
+    --cursor-2: url("/assets/images/cursors/circle-black.svg");
+    --cursor-3: url("/assets/images/cursors/circle-white.svg");
+
+    --cursor-pointer-0: url("/assets/images/cursors/pointer-black.svg");
+    --cursor-pointer-1: url("/assets/images/cursors/pointer-gray.svg");
+    --cursor-pointer-2: url("/assets/images/cursors/pointer-black.svg");
+    --cursor-pointer-3: url("/assets/images/cursors/pointer-white.svg");
+
+    --font-family-sans-serif: Lato, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
         "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
 }
@@ -55,11 +65,15 @@ $max_font: 24px;
 
 html {
     @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    font-weight: 300;
+    letter-spacing: 1.2px;
 }
 
 body {
     --bg-color: var(--bg-color-0);
     --fg-color: var(--fg-color-0);
+    --cursor: var(--cursor-0);
+    --cursor-pointer: var(--cursor-pointer);
     position: relative;
     padding-left: 52.5vw;
     width: 100%;
@@ -67,6 +81,11 @@ body {
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-family: var(--font-family-sans-serif);
+    cursor: var(--cursor), auto;
+
+    a {
+        cursor: var(--cursor-pointer), auto;
+    }
 
     transition: background-color 0.5s ease, color 0.3s ease, border-color 0.5s ease;
 
@@ -118,6 +137,7 @@ body {
             }
 
             .title {
+                font-weight: 300;
                 @include fluid-type($min_width, $max_width, 30px, 100px);
             }
 
@@ -126,7 +146,7 @@ body {
                 a {
                     text-decoration: none;
                     color: inherit;
-                    cursor: pointer;
+                    cursor: var(--cursor-pointer), auto;
                 }
 
                 display: flex;
@@ -165,6 +185,7 @@ body {
 
             .section-title {
                 @include fluid-type($min_width, $max_width, 20px, 60px);
+                font-weight: 300;
             }
 
             .section-content {
@@ -182,8 +203,8 @@ body {
                 a {
                     text-decoration: underline;
                     color: inherit;
-                    font-weight: bold;
-                    cursor: pointer;
+                    font-weight: 300;
+                    cursor: var(--cursor-pointer), auto;
                 }
             }
         }
@@ -211,8 +232,8 @@ body {
         a {
             text-decoration: underline;
             color: inherit;
-            font-weight: bold;
-            cursor: pointer;
+            font-weight: 300;
+            cursor: var(--cursor-pointer), auto;
 
             &:hover {
                 opacity: 0.5;
