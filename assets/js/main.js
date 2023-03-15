@@ -18,11 +18,11 @@ function handleIntersect(evt, idx) {
   if (evt[0].isIntersecting) {
     document.body.style.setProperty("--bg-color", `var(--bg-color-${idx})`);
     document.body.style.setProperty("--fg-color", `var(--fg-color-${idx})`);
-    document.body.style.setProperty("--cursor", `var(--cursor-${idx})`);
-    document.body.style.setProperty(
-      "--cursor-pointer",
-      `var(--cursor-pointer-${idx})`
-    );
+    // document.body.style.setProperty("--cursor", `var(--cursor-${idx})`);
+    // document.body.style.setProperty(
+    //   "--cursor-pointer",
+    //   `var(--cursor-pointer-${idx})`
+    // );
     if (evt[0].target.id) {
       history.pushState(
         "",
@@ -49,6 +49,7 @@ lucide.createIcons({
   attrs: {
     class: ["icon"],
     stroke: "var(--fg-color)",
+    "stroke-width": 1,
   },
 });
 

@@ -72,8 +72,6 @@ html {
 body {
     --bg-color: var(--bg-color-0);
     --fg-color: var(--fg-color-0);
-    --cursor: var(--cursor-0);
-    --cursor-pointer: var(--cursor-pointer);
     position: relative;
     padding-left: 52.5vw;
     width: 100%;
@@ -81,10 +79,10 @@ body {
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-family: var(--font-family-sans-serif);
-    cursor: var(--cursor), auto;
 
     a {
-        cursor: var(--cursor-pointer), auto;
+        cursor: pointer;
+        text-decoration-style: double;
     }
 
     transition: background-color 0.5s ease, color 0.3s ease, border-color 0.5s ease;
@@ -120,14 +118,14 @@ body {
             width: 100%;
             padding-left: 2.5vw;
             padding-right: 2.5vw;
-            border-right: 1px solid var(--fg-color);
+            // border-right: 1px solid var(--fg-color);
             display: flex;
             flex-direction: column;
             justify-content: center;
 
             @media (max-width: 765px) {
                 // border-bottom: 1px solid var(--fg-color);
-                border-right: none;
+                // border-right: none;
                 // margin-top: none;
                 // margin-left: 2.5vw;
                 // margin-right: 2.5vw;
@@ -146,7 +144,6 @@ body {
                 a {
                     text-decoration: none;
                     color: inherit;
-                    cursor: var(--cursor-pointer), auto;
                 }
 
                 display: flex;
@@ -201,10 +198,8 @@ body {
                 }
 
                 a {
-                    text-decoration: underline;
                     color: inherit;
                     font-weight: 300;
-                    cursor: var(--cursor-pointer), auto;
                 }
             }
         }
@@ -233,14 +228,14 @@ body {
             text-decoration: underline;
             color: inherit;
             font-weight: 300;
-            cursor: var(--cursor-pointer), auto;
+            opacity: 0.5;
 
             &:hover {
-                opacity: 0.5;
+                opacity: 1;
             }
 
             &.active {
-                opacity: 0.5;
+                opacity: 1;
             }
         }
     }
