@@ -49,7 +49,7 @@ lucide.createIcons({
   attrs: {
     class: ["icon"],
     stroke: "var(--fg-color)",
-    "stroke-width": 1,
+    "stroke-width": 1.25,
   },
 });
 
