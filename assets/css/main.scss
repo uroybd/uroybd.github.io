@@ -63,6 +63,18 @@ $max_width: 1200px;
 $min_font: 16px;
 $max_font: 24px;
 
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
 html {
     @include fluid-type($min_width, $max_width, $min_font, $max_font);
     font-weight: 300;
@@ -85,7 +97,10 @@ body {
         text-decoration-style: double;
     }
 
-    transition: background-color 0.5s ease, color 0.3s ease, border-color 0.5s ease;
+    transition:
+        background-color 0.5s ease,
+        color 0.3s ease,
+        border-color 0.5s ease;
 
     @media (max-width: 765px) {
         flex-direction: column;
@@ -110,7 +125,65 @@ body {
             height: 30vh;
             text-align: center;
             background-color: var(--bg-color);
-            transition: background-color 0.5s ease, color 0.3s ease, border-color 0.5s ease;
+            transition:
+                background-color 0.5s ease,
+                color 0.3s ease,
+                border-color 0.5s ease;
+        }
+
+        .sidebar-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            // background-color: #000000;
+            z-index: -99;
+
+            .circle {
+                position: absolute;
+                border-radius: 50%;
+                border: 1px solid var(--fg-color);
+                min-width: 50px;
+                min-height: 50px;
+                background-color: transparent;
+            }
+
+            #circle-1 {
+                top: 40px;
+                left: 40px;
+                animation: float 6s ease-in-out infinite;
+                @media (max-width: 765px) {
+                    display: none;
+                }
+            }
+
+            #circle-2 {
+                top: 20%;
+                left: 80px;
+                width: 100px;
+                height: 100px;
+                animation: float 8s ease-in-out infinite;
+            }
+
+            #circle-3 {
+                top: 10%;
+                left: 60%;
+                width: 15vh;
+                height: 15vh;
+                animation: float 6s ease-in-out infinite;
+                @media (max-width: 765px) {
+                    display: none;
+                }
+            }
+
+            #circle-4 {
+                top: 50%;
+                left: 50%;
+                width: 40vh;
+                height: 40vh;
+                animation: float 5s ease-in-out infinite;
+            }
         }
 
         .sidebar-content {
