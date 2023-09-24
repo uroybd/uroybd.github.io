@@ -17,10 +17,10 @@
     --fg-color-2: #000000;
     --fg-color-3: #ffffff;
 
-    --cursor-0: url("/assets/images/cursors/circle-black.svg");
-    --cursor-1: url("/assets/images/cursors/circle-gray.svg");
-    --cursor-2: url("/assets/images/cursors/circle-black.svg");
-    --cursor-3: url("/assets/images/cursors/circle-white.svg");
+    --cursor-0: url("/assets/images/cursors/shape-black.svg");
+    --cursor-1: url("/assets/images/cursors/shape-gray.svg");
+    --cursor-2: url("/assets/images/cursors/shape-black.svg");
+    --cursor-3: url("/assets/images/cursors/shape-white.svg");
 
     --cursor-pointer-0: url("/assets/images/cursors/pointer-black.svg");
     --cursor-pointer-1: url("/assets/images/cursors/pointer-gray.svg");
@@ -139,51 +139,6 @@ body {
             bottom: 0;
             // background-color: #000000;
             z-index: -99;
-
-            .circle {
-                position: absolute;
-                border-radius: 50%;
-                border: 1px solid var(--fg-color);
-                min-width: 50px;
-                min-height: 50px;
-                background-color: transparent;
-            }
-
-            #circle-1 {
-                top: 40px;
-                left: 40px;
-                animation: float 6s ease-in-out infinite;
-                @media (max-width: 765px) {
-                    display: none;
-                }
-            }
-
-            #circle-2 {
-                top: 20%;
-                left: 80px;
-                width: 100px;
-                height: 100px;
-                animation: float 8s ease-in-out infinite;
-            }
-
-            #circle-3 {
-                top: 10%;
-                left: 60%;
-                width: 15vh;
-                height: 15vh;
-                animation: float 6s ease-in-out infinite;
-                @media (max-width: 765px) {
-                    display: none;
-                }
-            }
-
-            #circle-4 {
-                top: 50%;
-                left: 50%;
-                width: 40vh;
-                height: 40vh;
-                animation: float 5s ease-in-out infinite;
-            }
         }
 
         .sidebar-content {
@@ -310,6 +265,88 @@ body {
             &.active {
                 opacity: 1;
             }
+        }
+    }
+}
+
+body {
+    .shape {
+        position: absolute;
+        .inner {
+            border: 1px solid var(--fg-color);
+            min-width: 50px;
+            min-height: 50px;
+            background-color: transparent;
+            transition: all 0.5s ease;
+        }
+    }
+
+    #shape-1 {
+        top: 40px;
+        left: 40px;
+        animation: float 6s ease-in-out infinite;
+        @media (max-width: 765px) {
+            display: none;
+        }
+    }
+
+    #shape-2 {
+        top: 20%;
+        left: 80px;
+        animation: float 8s ease-in-out infinite;
+
+        .inner {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    #shape-3 {
+        top: 10%;
+        left: 60%;
+        animation: float 6s ease-in-out infinite;
+        @media (max-width: 765px) {
+            display: none;
+        }
+
+        .inner {
+            width: 15vh;
+            height: 15vh;
+        }
+    }
+
+    #shape-4 {
+        top: 50%;
+        left: 50%;
+        animation: float 5s ease-in-out infinite;
+
+        .inner {
+            width: 40vh;
+            height: 40vh;
+        }
+    }
+}
+
+body[data-page="0"] {
+    .shape {
+        .inner {
+            border-radius: 50%;
+        }
+    }
+}
+
+body[data-page="1"] {
+    .shape {
+        .inner {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+body[data-page="2"] {
+    .shape {
+        .inner {
+            transform: skewX(-30deg);
         }
     }
 }

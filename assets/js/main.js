@@ -18,6 +18,7 @@ function handleIntersect(evt, idx) {
   if (evt[0].isIntersecting) {
     document.body.style.setProperty("--bg-color", `var(--bg-color-${idx})`);
     document.body.style.setProperty("--fg-color", `var(--fg-color-${idx})`);
+    document.body.setAttribute("data-page", idx);
     // document.body.style.setProperty("--cursor", `var(--cursor-${idx})`);
     // document.body.style.setProperty(
     //   "--cursor-pointer",
