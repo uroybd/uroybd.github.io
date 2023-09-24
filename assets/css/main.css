@@ -252,6 +252,11 @@ body .shape .inner {
   background-color: transparent;
   transition: all 0.5s ease;
 }
+@media (max-width: 765px) {
+  body .shape .inner {
+    scale: 0.5;
+  }
+}
 body #shape-1 {
   top: 40px;
   left: 40px;
@@ -270,6 +275,11 @@ body #shape-2 {
 body #shape-2 .inner {
   width: 100px;
   height: 100px;
+}
+@media (max-width: 765px) {
+  body #shape-2 {
+    left: 20px;
+  }
 }
 body #shape-3 {
   top: 10%;
@@ -294,17 +304,51 @@ body #shape-4 .inner {
   width: 40vh;
   height: 40vh;
 }
+@media (max-width: 765px) {
+  body #shape-4 .inner {
+    width: 25vh;
+    height: 25vh;
+  }
+}
 
 body[data-page="0"] .shape .inner {
   border-radius: 50%;
+  scale: 0.9;
 }
 
-body[data-page="1"] .shape .inner {
+body[data-page="3"] .shape .inner {
   transform: rotate(45deg);
 }
 
 body[data-page="2"] .shape .inner {
   transform: skewX(-30deg);
+  scale: 0.7;
+}
+
+@media (max-width: 765px) {
+  body[data-page="1"] .shape {
+    animation: none !important;
+  }
+  body[data-page="1"] .shape .inner {
+    scale: 1;
+  }
+  body[data-page="1"] #shape-2 {
+    left: 0px;
+    top: 40px;
+  }
+  body[data-page="1"] #shape-2 .inner {
+    width: calc(100vw - 80px);
+    height: calc(100vw - 80px);
+  }
+  body[data-page="1"] #shape-4 {
+    right: 0px;
+    left: unset;
+    top: 80px;
+  }
+  body[data-page="1"] #shape-4 .inner {
+    width: calc(100vw - 160px);
+    height: calc(100vw - 160px);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
