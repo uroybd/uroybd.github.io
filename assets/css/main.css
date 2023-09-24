@@ -326,9 +326,6 @@ body[data-page="2"] .shape .inner {
 }
 
 @media (max-width: 765px) {
-  body[data-page="1"] .shape {
-    animation: none !important;
-  }
   body[data-page="1"] .shape .inner {
     scale: 1;
   }
