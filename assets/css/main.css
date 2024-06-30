@@ -22,8 +22,8 @@
   --cursor-pointer-2: url("/assets/images/cursors/pointer-black.svg");
   --cursor-pointer-3: url("/assets/images/cursors/pointer-white.svg");
   --font-family-sans-serif: Lato, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
-      "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-      "Noto Color Emoji";
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 
 @keyframes float {
@@ -153,6 +153,20 @@ body aside.sidebar .sidebar-content .connections a {
   body aside.sidebar .sidebar-content .connections {
     justify-content: center;
   }
+}
+body aside.sidebar .sidebar-content .fediring {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 0.8rem;
+}
+body aside.sidebar .sidebar-content .fediring a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 body main {
   height: 100%;
